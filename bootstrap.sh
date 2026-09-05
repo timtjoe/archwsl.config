@@ -1,12 +1,21 @@
 #!/bin/bash
+# Arch WSL bootstrap script
+# Personal setup for timtjoe
 
-#update system
+# Update system
 sudo pacman -Syu --noconfirm
 
-#restore package list
-sudo pacman -S --needed - < ~/dotfiles/pkglist.txt
+# Restore packages from pkglist.txt
+if [ -f ~/dotfiles/pkglist.txt ]; then
+  sudo pacman -S --needed - < ~/dotfiles/pkglist.txt
+else
+  echo "pkglist.txt not found, skipping package restore"
+fi
 
-# recreate package list
-ln -sf ~/dotfiles/bashrc ~/.bashrc
-ln -sf ~/dotfiles/bash_profile ~/.bash_profile
-ln -sf ~/dotfiles/gitconfig ~/.gitconfig
+# Symlink configs using GNU Stow
+cd ~/dotfiles
+stow bash
+stow git
+stow ssh
+
+echo "Bootstrap complete — system updated, packages restored, configs linked."

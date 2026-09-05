@@ -7,5 +7,6 @@ nodejs
 npm
 openssh
 python
+stow
 sudo
 unzip
