@@ -1,15 +1,16 @@
+
 # Arch WSL Config
 
-Portable setup for Arch Linux on WSL.
+My setup for Arch Linux on WSL.
 
 ## Usage
-1. Clone this repo:
+1. Clone:
    git clone git@github.com:timtjoe/archwsl.config ~/dotfiles
 
-2. Copy configs:
-   cp ~/dotfiles/bashrc ~/.bashrc
-   cp ~/dotfiles/bash_profile ~/.bash_profile
-   cp ~/dotfiles/gitconfig ~/.gitconfig
+2. Symlink configs:
+   ln -sf ~/dotfiles/bashrc ~/.bashrc
+   ln -sf ~/dotfiles/bash_profile ~/.bash_profile
+   ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 
-3. Run bootstrap:
+3. Bootstrap:
    bash ~/dotfiles/bootstrap.sh
