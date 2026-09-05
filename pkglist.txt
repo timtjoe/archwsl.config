@@ -1,0 +1,11 @@
+base
+git
+go
+less
+nano
+nodejs
+npm
+openssh
+python
+sudo
+unzip

@@ -1,19 +1,12 @@
 #!/bin/bash
-# Update system
+
+#update system
 sudo pacman -Syu --noconfirm
 
-# Install essentials
-sudo pacman -S --noconfirm go nodejs npm git python unzip less nano openssh
+#restore package list
+sudo pacman -S --needed - < ~/dotfiles/pkglist.txt
 
-# Install Bun
-curl -fsSL https://bun.sh/install | bash
-
-# Install Deno
-curl -fsSL https://deno.land/install.sh | sh
-
-# Reload configs
-source ~/.bashrc
-
-# Git defaults
-git config --global user.name "TimJoe"
-git config --global user.email "ttjoe0@gmail.com"
+# recreate package list
+ln -sf ~/dotfiles/bashrc ~/.bashrc
+ln -sf ~/dotfiles/bash_profile ~/.bash_profile
+ln -sf ~/dotfiles/gitconfig ~/.gitconfig
