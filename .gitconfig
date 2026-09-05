@@ -1,0 +1,12 @@
+[user]
+    name = TimJoe
+    email = ttjoe0@gmail.com
+
+[core]
+    editor = nano
+
+[pager]
+    log = less
+
+[safe]
+    directory = /home/timothy/projects
