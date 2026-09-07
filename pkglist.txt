@@ -1,7 +1,9 @@
 base
+base-devel
 git
 go
 less
+make
 nano
 nodejs
 npm
@@ -9,4 +11,6 @@ openssh
 python
 stow
 sudo
+tcl
+tk
 unzip
