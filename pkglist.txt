@@ -1,5 +1,7 @@
 base
 base-devel
+bun
+deno
 git
 go
 less
@@ -14,3 +16,4 @@ sudo
 tcl
 tk
 unzip
+wget
